@@ -1,0 +1,134 @@
+*{/*Configuración base de todos los elementos de la página*/
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body{/*Diseño del fondo de la página*/
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgb(124,207,255), rgb(255,255,255));
+}
+
+header{
+    padding: 2rem 1rem;/*Baja el titulo dentro de las dimensiones de la página*/
+    margin: 0 auto;/*Centra el titulo sin importar el tamaño de la página*/
+}
+
+#Formato-de-tareas{
+    display: flex;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#Entrada{
+    flex: 1 1 0%;
+    background-color: rgba(42, 91, 165, 0.349);
+    padding:  1rem;
+    border-radius: 1rem;
+    margin-right:  1rem;
+    color: rgb(14, 13, 13);
+    font-size: 1.25rem;
+}
+
+#Añadir-entrada{
+    color: darkblue;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background-image: linear-gradient(to right, rgb(4, 4, 4, 0.518), rgba(151, 16, 16, 0.847));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#Añadir-entrada:hover{
+    opacity: 0.6;
+}
+
+#Añadir-entrada:active{
+    opacity: 0.8;
+}
+
+main{
+    flex: 1 1 0%;
+    background-color: rgba(42, 91, 165, 0.349);
+    padding:  1rem;
+    border-radius: 1rem;
+    margin-right:  1rem;
+    color: rgb(12, 12, 12);
+    font-size: 1.25rem;
+}
+
+.To-Do-Lists{
+    padding: 1rem;
+}
+
+.To-Do-Lists h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: blanchedalmond;
+    margin-bottom: 1rem;
+}
+
+#Tareas .Task{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(212, 224, 233);
+    padding: 1rem;
+    border-radius: 1rem;
+    border-radius: 1rem;
+}
+
+#Tareas .Task .content .text{
+    color: dimgray ;
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#Tareas .Task .content .text:not(:read-only){/*Funciona como un indicativo de que no es solo*/
+    color: red;/*un valor de lectura*/
+}
+
+#Tareas .Task .Buttons{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+#Tareas .Task .Buttons button{
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+#Tareas .Task .Buttons button:hover{
+    opacity: 0.6;
+}
+
+#Tareas .Task .Buttons button:active{
+    opacity: 0.8;
+}
+
+#Tareas .Task .Buttons .Edit{
+    background-image: linear-gradient(to right, rgba(95, 22, 223, 0.518), rgba(233, 0, 221, 0.847));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#Tareas .Task .Buttons .Delete{
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.518), rgba(9, 9, 9, 0.847));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
